@@ -69,17 +69,22 @@ h6 {
 }
 
 /*===========================================================================================================================================================================================================================================================================================================================================================================================================================================================*/
+
+
 body {
-	display: block;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
 	margin: 0 auto;
 	max-width: 60rem;
-	padding: 3rem 1rem;
-	font-size: 1rem;
+	padding: 2rem 1rem;
+	font-size: 1.1rem;
 	line-height: 1.333;
 	font-family: Montserrat;
 	background-color: #f7f0dc;
+
   }
-  
+
   .hidden {
     border: 0;
     height: 0vw;
@@ -91,7 +96,7 @@ body {
 }
 
 .accordion {
-	border-bottom: 1px solid gray;
+	border-bottom: 0.1rem solid gray;
   }
   
   .accordion__label {
@@ -113,16 +118,62 @@ body {
   }
   .accordion__control:hover ~ .accordion__label {
 	transition: padding-bottom 0.8s ease;
-	}
+}
 .accordion__control:hover ~ .accordion__label img {
-	height: 20em;
-	width: 20em;
+	height: 25rem;
+	width: 27rem;
 	transform: scale(1);
 	transition: all 0.5s ease;
+	padding-top: 1rem;
 	}
 .accordion__control:checked ~ .accordion__label img {
-	height: 20em;
-	width: 20em;
+	height: 25rem;
+	width: 27rem;
 	transform: scale(1);
 	transition: all 0.5s ease;
+	padding-top: 1rem;
 	}
+
+@media (max-width: 920px){
+.accordion__control:hover ~ .accordion__label img {
+	height: 20rem;
+	width: 22rem;
+	transform: scale(1);
+	transition: all 0.5s ease;
+	padding-top: 1rem;
+	}
+.accordion__control:checked ~ .accordion__label img {
+	height: 20rem;
+	width: 22rem;
+	transform: scale(1);
+	transition: all 0.5s ease;
+	padding-top: 1rem;
+	}
+}
+
+  @media (max-width: 450px){
+  .accordion__label img {
+   height: 0em;
+   width: 0em;
+   transform: scale(0);
+   transition: all 0.4s ease;
+   align-self: center;
+  }
+  .accordion__control:hover ~ .accordion__label {
+	transition: padding-bottom 0.8s ease;
+	}
+.accordion__control:hover ~ .accordion__label img {
+	height: 15rem;
+	width: 17rem;
+	transform: scale(1);
+	transition: all 0.5s ease;
+	padding-top: 1rem;
+	}
+.accordion__control:checked ~ .accordion__label img {
+	height: 15rem;
+	width: 17rem;
+	transform: scale(1);
+	transition: all 0.5s ease;
+	padding-top: 1rem;
+	}
+}
